@@ -5,18 +5,18 @@ import pandas as pd
 APP_ID = "com.mobilechess.gp"
 
 
-# Mengambil 5000 ulasan pertama
+# Mengambil 30000 ulasan pertama
 all_reviews, _ = reviews(
     app_id=APP_ID,
     lang='id',  # Bahasa Indonesia
     country='id',  # Negara Indonesia
     sort=Sort.NEWEST,  # Mengambil ulasan terbaru terlebih dahulu
-    count=10000
+    count=30000
 )
 
-# Memisahkan menjadi 5000 ulasan pertama dan 5000 ulasan terakhir
-reviews_first = all_reviews[:5000]
-reviews_last = all_reviews[-5000:]
+# Memisahkan menjadi 15000 ulasan pertama dan 15000 ulasan terakhir
+reviews_first = all_reviews[:15000]
+reviews_last = all_reviews[-15000:]
 
 
 # Menggabungkan kedua dataset
